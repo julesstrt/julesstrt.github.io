@@ -2,115 +2,96 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
+  display: Jules Streit
+  given: Jules
+  family: Streit
+  alternate: ''
+  pronunciation: ''
   pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
+postnominals: []
 status:
-  icon: "☕️"
-role: Senior AI Research Scientist
+  icon: "🤖"
+role: Robotics MSc Student at EPFL
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Specializing in robotic perception, sensor integration, and learning-based control for autonomous systems. My work spans perception pipelines, sensor fusion with LiDAR and RGB cameras, and physical platform integration — combining strong software skills with hands-on hardware testing and prototyping. Proficient in Python, C++, and ROS2.
 
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: École Polytechnique Fédérale de Lausanne (EPFL)
+    url: https://www.epfl.ch/
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:jules.simonstreit@epfl.ch
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
-  - icon: brands/github
-    url: https://github.com/example
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://www.linkedin.com/in/jules-streit-55a111228/
 
 interests:
-  - Large Language Models
+  - Robotic Perception & Sensor Fusion
+  - Learning-based Control (RL & Imitation Learning)
+  - Autonomous Navigation (ROS2 & SLAM)
   - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Sim-to-Real Transfer
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: MSc Robotics
+    institution: École Polytechnique Fédérale de Lausanne (EPFL)
+    start: 2024-09-01
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
-
-experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+      Major in Robotics, minor in Space Technologies. Currently in second year.
+  - degree: BSc Microengineering
+    institution: EPFL & KTH Stockholm (exchange)
+    start: 2021-09-01
+    end: 2024-06-30
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      First two years at EPFL, third year at KTH Royal Institute of Technology (Stockholm) as an exchange student.
 
 skills:
-  - name: Technical Skills
+  - name: Programming
     items:
       - label: Python
         level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
+      - label: C++
         level: 4
-  - name: Research & Communication
+      - label: ROS2
+        level: 4
+      - label: MATLAB
+        level: 3
+  - name: Robotics & AI
     items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
+      - label: Reinforcement Learning
         level: 4
-      - label: Grant Proposals
+      - label: Imitation Learning
+        level: 4
+      - label: Computer Vision (OpenCV)
+        level: 4
+      - label: SLAM & Navigation
+        level: 3
+      - label: Control Theory
+        level: 4
+  - name: Tools & Frameworks
+    items:
+      - label: PyTorch
+        level: 4
+      - label: Docker
+        level: 3
+      - label: Linux & Git
+        level: 4
+      - label: PyBullet / Webots / Unity
+        level: 3
+  - name: Hardware & Firmware
+    items:
+      - label: 3D Printing & Prototyping
+        level: 4
+      - label: Arduino & Motor Control
+        level: 4
+      - label: Mechanical Assembly
         level: 4
 
 languages:
-  - name: English
+  - name: French
     level: 5
-    label: Native
-  - name: Spanish
+    label: Mother tongue
+  - name: English
     level: 4
-    label: Fluent
-
-awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+    label: TOEIC C1
