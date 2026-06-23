@@ -13,3 +13,6 @@ main:
   - name: Projects
     url: project/
     weight: 30
+  - name: Certifications
+    url: certifications/
+    weight: 40

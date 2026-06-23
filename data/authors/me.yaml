@@ -102,6 +102,13 @@ skills:
       - label: Debugging
         level: 4
 
+awards:
+  - title: Space Debris and Space Sustainability
+    awarder: ESA Academy — European Space Agency
+    date: 2024-04-01
+    summary: |
+      Training course covering the full scope of space debris mitigation: orbital physics, mitigation guidelines, deorbiting, collision avoidance, active debris removal, and re-entry aerothermodynamics.
+
 languages:
   - name: French
     level: 5
