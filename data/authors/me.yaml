@@ -13,7 +13,7 @@ status:
   icon: "🤖"
 role: Robotics MSc Student at EPFL
 bio: |
-  Robotics MSc student at EPFL with experience across the full robotic stack — hardware, firmware, and AI — from drone flight controllers to embedded electronics and learning-based control. Combines classical control theory (MPC, PID) with modern ML approaches, backed by a track record of independently built, hands-on robotics projects.
+  Robotics MSc student at EPFL with experience across the full robotic stack — wiring, debugging, and assembling hardware, embedded firmware (Arduino), computer vision, and AI-based control. Combines classical control theory (MPC, PID) with modern ML approaches, from drone flight controllers to learning-based manipulation.
 
 affiliations:
   - name: École Polytechnique Fédérale de Lausanne (EPFL)
