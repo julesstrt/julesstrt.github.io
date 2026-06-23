@@ -73,7 +73,7 @@ skills:
         level: 4
       - label: Imitation Learning
         level: 4
-      - label: Computer Vision (OpenCV)
+      - label: Computer Vision
         level: 4
       - label: SLAM & Navigation
         level: 3
@@ -96,6 +96,10 @@ skills:
       - label: Arduino & Motor Control
         level: 4
       - label: Mechanical Assembly
+        level: 4
+      - label: Electronics
+        level: 4
+      - label: Debugging
         level: 4
 
 languages:
