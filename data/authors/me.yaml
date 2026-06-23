@@ -105,9 +105,19 @@ skills:
 awards:
   - title: Space Debris and Space Sustainability
     awarder: ESA Academy — European Space Agency
-    date: 2024-04-01
+    date: 2025-09-01
     summary: |
       Training course covering the full scope of space debris mitigation: orbital physics, mitigation guidelines, deorbiting, collision avoidance, active debris removal, and re-entry aerothermodynamics.
+  - title: TOEIC — C1 Level
+    awarder: Test Of English for International Communication
+    date: 2024-11-01
+    summary: |
+      Listening, Reading, and Writing Comprehension. C1 proficiency level.
+  - title: Watch Advisor Certificate
+    awarder: FHH — Fondation de la Haute Horlogerie, Geneva
+    date: 2024-08-01
+    summary: |
+      General knowledge in watchmaking.
 
 languages:
   - name: French
