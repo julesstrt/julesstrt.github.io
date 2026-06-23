@@ -65,7 +65,7 @@ sections:
           - publications
         exclude_featured: false
     design:
-      view: compact
+      view: article-grid
   - block: collection
     id: talks
     content:
