@@ -27,9 +27,10 @@ links:
     url: https://www.linkedin.com/in/jules-streit-55a111228/
 
 interests:
-  - Robotic Perception & Sensor Fusion
+  - Autonomous Robotics
+  - Space Robotics
+  - Drones
   - Learning-based Control (RL & Imitation Learning)
-  - Autonomous Navigation (ROS2 & SLAM)
   - Computer Vision
   - Sim-to-Real Transfer
 
