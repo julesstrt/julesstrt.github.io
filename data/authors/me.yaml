@@ -33,6 +33,16 @@ interests:
   - Computer Vision
   - Sim-to-Real Transfer
 
+experience:
+  - role: Teaching Assistant
+    org: EPFL · Part-time
+    start: 2025-02-01
+    end: 2026-06-01
+    summary: |
+      In charge of exercise sessions for second-year students.
+      - **Analysis IV**: Fourier series, Fourier transform, Laplace transform
+      - **General Physics**: electromagnetism and thermodynamics
+
 education:
   - degree: MSc Robotics
     institution: École Polytechnique Fédérale de Lausanne (EPFL)
