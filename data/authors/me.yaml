@@ -13,7 +13,7 @@ status:
   icon: "🤖"
 role: Robotics MSc Student at EPFL
 bio: |
-  Specializing in robotic perception, sensor integration, and learning-based control for autonomous systems. My work spans perception pipelines, sensor fusion with LiDAR and RGB cameras, and physical platform integration — combining strong software skills with hands-on hardware testing and prototyping. Proficient in Python, C++, and ROS2.
+  Robotics MSc student at EPFL with experience across the full robotic stack — hardware, firmware, and AI — from drone flight controllers to embedded electronics and learning-based control. Combines classical control theory (MPC, PID) with modern ML approaches, backed by a track record of independently built, hands-on robotics projects.
 
 affiliations:
   - name: École Polytechnique Fédérale de Lausanne (EPFL)
