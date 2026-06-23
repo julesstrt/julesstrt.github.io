@@ -1,7 +1,7 @@
----
+﻿---
 title: "Ongoing Project: LeKiwi Robot"
 summary: "Assembly and development of LeKiwi, Hugging Face's open-source mobile manipulator robot, with ongoing work on imitation learning and autonomous navigation."
-date: 2024-05-01
+date: 2026-02-01
 tags: ["Robotics", "Imitation Learning", "Autonomous Navigation", "Ongoing"]
 image:
   caption: ""
@@ -20,3 +20,4 @@ Ongoing project based on **LeKiwi**, Hugging Face's open-source mobile manipulat
 **Software (ongoing work):**
 - Imitation learning for manipulation
 - Autonomous navigation using LiDAR and RGB cameras
+
