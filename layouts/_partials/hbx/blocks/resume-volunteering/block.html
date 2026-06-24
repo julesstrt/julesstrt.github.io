@@ -1,5 +1,6 @@
 {{/* Hugo Blox: Volunteering — custom local block */}}
-{{/* Reads $profile.volunteer from the author YAML (same field names as experience). */}}
+{{/* Reads volunteer[] directly from hugo.Data.authors.<username>
+     because get_author_profile only exposes known fields. */}}
 
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
@@ -13,7 +14,9 @@
 {{ if eq (printf "%T" $username_raw) "string" }}
   {{ $username = strings.TrimSpace $username_raw }}
 {{ end }}
-{{ $profile := partial "functions/get_author_profile" $username }}
+
+{{/* Read raw author data to access custom fields not exposed by get_author_profile */}}
+{{ $raw := index hugo.Data.authors $username }}
 
 {{ $date_format := "Jan 2006" }}
 {{ $date_format_raw := index $design "date_format" }}
@@ -21,36 +24,38 @@
   {{ $date_format = strings.TrimSpace $date_format_raw | default "Jan 2006" }}
 {{ end }}
 
-{{ $volunteer_raw := $profile.volunteer }}
-{{ $volunteer_iter := slice }}
-{{ if reflect.IsSlice $volunteer_raw }}
-  {{ $volunteer_iter = $volunteer_raw }}
-{{ else if and $volunteer_raw (reflect.IsMap $volunteer_raw) }}
-  {{ $volunteer_iter = slice $volunteer_raw }}
+{{ $volunteer_raw := slice }}
+{{ if $raw }}
+  {{ $v := index $raw "volunteer" }}
+  {{ if reflect.IsSlice $v }}
+    {{ $volunteer_raw = $v }}
+  {{ else if and $v (reflect.IsMap $v) }}
+    {{ $volunteer_raw = slice $v }}
+  {{ end }}
 {{ end }}
 
 {{ $items := slice }}
-{{ range $volunteer_iter }}
+{{ range $volunteer_raw }}
   {{ if reflect.IsMap . }}
-    {{ $role := "" }}
-    {{ $org  := "" }}
-    {{ $start := "" }}
-    {{ $end  := "" }}
+    {{ $role    := "" }}
+    {{ $org     := "" }}
+    {{ $start   := "" }}
+    {{ $end     := "" }}
     {{ $summary := "" }}
-    {{ $icon := "" }}
-    {{ $tags := slice }}
+    {{ $icon    := "" }}
+    {{ $tags    := slice }}
 
-    {{ with index . "role" }}{{ $role = strings.TrimSpace (printf "%v" .) }}{{ end }}
-    {{ with index . "org"  }}{{ $org  = strings.TrimSpace (printf "%v" .) }}{{ end }}
-    {{ with index . "start" }}{{ $start = strings.TrimSpace (printf "%v" .) }}{{ end }}
-    {{ with index . "end"   }}{{ $end   = strings.TrimSpace (printf "%v" .) }}{{ end }}
+    {{ with index . "role"    }}{{ $role    = strings.TrimSpace (printf "%v" .) }}{{ end }}
+    {{ with index . "org"     }}{{ $org     = strings.TrimSpace (printf "%v" .) }}{{ end }}
+    {{ with index . "start"   }}{{ $start   = strings.TrimSpace (printf "%v" .) }}{{ end }}
+    {{ with index . "end"     }}{{ $end     = strings.TrimSpace (printf "%v" .) }}{{ end }}
     {{ with index . "summary" }}{{ $summary = strings.TrimSpace (printf "%v" .) }}{{ end }}
-    {{ with index . "icon" }}{{ $icon = strings.TrimSpace (printf "%v" .) }}{{ end }}
+    {{ with index . "icon"    }}{{ $icon    = strings.TrimSpace (printf "%v" .) }}{{ end }}
     {{ $tags_raw := index . "tags" }}
     {{ if reflect.IsSlice $tags_raw }}
       {{ range $tags_raw }}
         {{ $t := strings.TrimSpace (printf "%v" .) }}
-        {{ if $t }}{{ $items = $items | append $t }}{{ end }}
+        {{ if $t }}{{ $tags = $tags | append $t }}{{ end }}
       {{ end }}
     {{ end }}
 
@@ -65,14 +70,12 @@
   <h2 class="mb-10 text-3xl font-bold text-gray-900 dark:text-white text-center">Volunteering</h2>
 
   <div class="relative">
-    {{/* Timeline line */}}
     <div class="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-primary-400 to-primary-600/50"></div>
 
     <div class="space-y-8">
       {{ range $items }}
       <div class="group relative pl-12 sm:pl-16">
 
-        {{/* Timeline marker */}}
         <div class="absolute left-0 sm:left-2 top-6 flex items-center justify-center">
           <div class="relative">
             <div class="absolute inset-0 w-8 h-8 bg-primary-500/30 rounded-full blur-md group-hover:bg-primary-500/50 transition-all duration-300"></div>
@@ -81,16 +84,13 @@
               {{ if $ic }}
                 {{ partial "functions/get_icon" (dict "name" $ic "attributes" "class='w-4 h-4 text-primary-600 dark:text-primary-400'") }}
               {{ else }}
-                {{/* Hand/heart icon for volunteering */}}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-primary-600 dark:text-primary-400"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/></svg>
               {{ end }}
             </div>
           </div>
         </div>
 
-        {{/* Content card */}}
         <div class="relative bg-white dark:bg-white/[0.02] backdrop-blur-sm rounded-xl border border-gray-200 dark:border-white/[0.06] p-6 hover:bg-gray-50 dark:hover:bg-white/[0.04] hover:border-primary-300 dark:hover:border-primary-500/30 transition-all duration-300 group-hover:translate-x-1 shadow-sm dark:shadow-none">
-
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
             <div>
               <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
@@ -100,8 +100,6 @@
                 {{ index . "org" }}
               </p>
             </div>
-
-            {{/* Date badge */}}
             <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -134,9 +132,7 @@
           {{ with index . "tags" }}
           <div class="flex flex-wrap gap-2 mt-4">
             {{ range . }}
-            <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-500/20">
-              {{ . }}
-            </span>
+            <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-500/20">{{ . }}</span>
             {{ end }}
           </div>
           {{ end }}

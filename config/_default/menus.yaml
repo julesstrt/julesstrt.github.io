@@ -13,6 +13,9 @@ main:
   - name: Projects
     url: project/
     weight: 30
+  - name: Volunteering
+    url: volunteering/
+    weight: 40
   - name: Certifications
     url: certifications/
-    weight: 40
+    weight: 50
