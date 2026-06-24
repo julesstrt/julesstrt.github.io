@@ -103,6 +103,13 @@ skills:
       - label: Debugging
         level: 4
 
+volunteer:
+  - role: Committee Member
+    org: Erasmus Student Network (ESN) — EPFL & UNIL
+    start: 2024-09-01
+    summary: |
+      Organization of various events for Erasmus students at EPFL and UNIL (excursions, sports activities, social events, and visits).
+
 awards:
   - title: Space Debris and Space Sustainability
     awarder: ESA Academy — European Space Agency

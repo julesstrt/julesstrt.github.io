@@ -22,6 +22,11 @@ sections:
     content:
       title: Skills
       username: me
+  - block: resume-volunteering
+    content:
+      username: me
+    design:
+      date_format: 'January 2006'
   - block: resume-awards
     content:
       title: Awards
