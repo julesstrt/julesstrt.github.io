@@ -11,7 +11,7 @@ name:
 postnominals: []
 status:
   icon: "🤖"
-role: Robotics MSc Student at EPFL
+role: Robotics and Space Technologies MSc Student at EPFL
 bio: |
   Robotics MSc student at EPFL with experience across the full robotic stack — wiring, debugging, and assembling hardware, embedded firmware (Arduino), computer vision, and AI-based control. Combines classical control theory (MPC, PID) with modern ML approaches, from drone flight controllers to learning-based manipulation.
 
@@ -116,6 +116,16 @@ awards:
     date: 2025-09-01
     summary: |
       Training course covering the full scope of space debris mitigation: orbital physics, mitigation guidelines, deorbiting, collision avoidance, active debris removal, and re-entry aerothermodynamics.
+  - title: Fly Your Satellite! — Design Booster 2
+    awarder: European Space Agency (ESA)
+    date: 2026-06-01
+    summary: |
+      Recognition of participation in the ESA educational Design Booster 2 programme as part of the CHESS team.
+  - title: DICEO 2026 — Disruptive Innovation and Commercialization in Earth Observation
+    awarder: ESA Academy — European Space Agency
+    date: 2026-07-01
+    summary: |
+      ESA Academy training on disruptive innovation and commercialization in the Earth Observation sector.
   - title: TOEIC — C1 Level
     awarder: Test Of English for International Communication
     date: 2024-11-01
