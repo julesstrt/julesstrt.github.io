@@ -38,11 +38,9 @@ sections:
       title: '🤖 About My Work'
       subtitle: ''
       text: |-
-        I'm a second-year Robotics MSc student at EPFL, with a minor in Space Technologies. My work focuses on **perception-driven autonomy** — building systems where robots can sense, understand, and act in the real world.
+        I'm a final-year Robotics MSc student at EPFL, with a minor in Space Technologies. I'm currently a Robotics Systems Intern at **Tethys Robotics** in Zurich, a startup developing underwater drones.
 
-        My projects span **autonomous navigation** (ROS2, SLAM, LiDAR/RGB sensor fusion), **learning-based control** (Reinforcement Learning, Imitation Learning), and **hardware integration** (from motor control and 3D printing to full-stack Docker-based deployment).
-
-        I'm currently working with the EPFL AI team on the LeKiwi robot, developing a ROS2 pipeline for autonomous navigation and manipulation. Feel free to reach out! 😃
+        I'm looking for a **Master's thesis starting in April 2027**. Feel free to reach out! 😃
     design:
       columns: '1'
 ---

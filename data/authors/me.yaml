@@ -32,6 +32,8 @@ interests:
   - Drones
   - Learning-based Control (RL & Imitation Learning)
   - Computer Vision
+  - Deep Learning
+  - Rovers
   - Sim-to-Real Transfer
 
 experience:
@@ -56,7 +58,7 @@ education:
     institution: École Polytechnique Fédérale de Lausanne (EPFL)
     start: 2024-09-01
     summary: |
-      Major in Robotics, minor in Space Technologies. Currently in second year.
+      Major in Robotics, minor in Space Technologies. Currently in final year.
   - degree: BSc Microengineering
     institution: EPFL & KTH Stockholm (exchange)
     start: 2021-09-01
@@ -83,8 +85,6 @@ skills:
         level: 4
       - label: Computer Vision
         level: 4
-      - label: SLAM & Navigation
-        level: 3
       - label: Control Theory
         level: 4
   - name: Tools & Frameworks
@@ -95,8 +95,6 @@ skills:
         level: 3
       - label: Linux & Git
         level: 4
-      - label: PyBullet / Webots / Unity
-        level: 3
   - name: Hardware & Firmware
     items:
       - label: 3D Printing & Prototyping
