@@ -35,6 +35,13 @@ interests:
   - Sim-to-Real Transfer
 
 experience:
+  - role: Robotics Systems Intern
+    org: Tethys Robotics · Zurich · 6-month internship
+    start: 2026-09-01
+    summary: |
+      - Developing vision-based localization for an underwater drone using ROS2 and Docker, including field testing.
+      - Improving the robotics software stack, with a focus on localization, path planning and computer vision.
+      - Performing release testing of the robotics software stack.
   - role: Teaching Assistant
     org: EPFL · Part-time
     start: 2025-02-01
